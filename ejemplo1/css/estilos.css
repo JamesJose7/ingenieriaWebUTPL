@@ -1,0 +1,52 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #f1f1f1;
+	font-family: arial;
+}
+
+header, nav, footer {
+	background: #599532;
+	color: #000;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.cabecera figure {
+	width: 20%;
+	display: inline-block;
+	padding: 1em 2em;
+}
+
+.cabecera form {
+	width: 70%;
+	display: inline-block;
+	text-align: right;
+}
+
+main {
+	width: 68%;
+	display: inline-block;
+	margin-left: 3em;
+	vertical-align: top;
+	background: #82BB5D;
+}
+
+main article {
+	padding: 1em;
+}
+
+aside {
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
+	background: #82BB5D;
+}
+
+footer h6 {
+	padding: 2em 0;
+	text-align: center;
+}

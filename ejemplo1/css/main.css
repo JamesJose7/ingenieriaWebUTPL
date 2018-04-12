@@ -1,52 +1,68 @@
 * {
 	padding: 0;
-	margin: 0;
+	margin: 2px;
+	font-family: Helvetica;
 }
 
 body {
-	background: #f1f1f1;
-	font-family: arial;
+	margin: 5px 10px;
+	font-size: 1em;
 }
 
-header, nav, footer {
-	background: #599532;
-	color: #000;
-	width: 90%;
-	margin: 0 auto;
+header {
+	width: 100%;
+	text-align: center;
 }
 
-.cabecera figure {
-	width: 20%;
+header figure, header form {
+	width: 48%;
+	padding: 50px 10px;
 	display: inline-block;
-	padding: 1em 2em;
+	background: #66CC33;
+	text-align: center;
 }
 
-.cabecera form {
-	width: 70%;
-	display: inline-block;
-	text-align: right;
+header form {
+	font-size: 1.3em;
+}
+
+nav {
+	background: #FBF072;
+	text-align: center;
+	padding: 20px 0;	
+	margin-bottom: 4px;
+}
+
+#galeria {
+	background: #66CC33;
+	text-align: center;
+	padding: 55px 0;
 }
 
 main {
-	width: 68%;
+	width: 100%;
+	text-align: center;
+}
+
+.producto {
+	background: #66CC33;
 	display: inline-block;
-	margin-left: 3em;
-	vertical-align: top;
-	background: #82BB5D;
+	width: 19.5%;
+	margin: 2px auto;
+	text-align: center;
+	padding: 40px 0;
 }
 
-main article {
-	padding: 1em;
-}
-
-aside {
-	width: 25%;
+article {
+	width: 49%;
 	display: inline-block;
-	vertical-align: top;
-	background: #82BB5D;
+	background: #66CC33;
+	padding: 50px 0;
+	text-align: center;
 }
 
-footer h6 {
-	padding: 2em 0;
+footer {
+	background: #66CC33;
+	padding: 40px 0;
 	text-align: center;
 }

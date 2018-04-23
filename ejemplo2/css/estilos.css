@@ -137,10 +137,40 @@ footer h6 {
 	padding: 3em 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 769px) {
 	.tipodetalle, .serviciodetalle {
 		display: block;
 		width: 100%;
 		margin-bottom: 1em;
+	}
+
+	.serviciodetalle h3 {
+		font-size: 1.3em;
+	}
+
+	.serviciodetalle p {
+		font-size: 1.1em;
+	}
+
+	.serviciodetalle img:hover {
+		transform: scale(1.1);
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+	header h1 {
+		font-size: 1.3em;
+
+	}
+
+	nav {
+		margin-top: 70px;
+	}
+
+	nav a {
+		font-size: 0.9em;
+		display: block;
+		min-width: 100px;
 	}
 }

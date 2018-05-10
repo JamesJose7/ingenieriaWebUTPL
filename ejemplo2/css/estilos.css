@@ -1,6 +1,7 @@
 * {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 html, body {
@@ -86,7 +87,7 @@ h2 {
 }
 
 .serviciodetalle, .tipodetalle {
-	width: 33%;
+	width: 32.333%;
 	background: #333;
 	display: inline-block;
 	color: #f3f3f3;

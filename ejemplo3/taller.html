@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PHP</title>
+</head>
+<body>
+	<h1>Formularios en PHP</h1>
+	
+	<form method="post" action="internas/server.php">
+		<label for="nombres">Nombre</label>
+		<input id="nombres" type="text" name="nombres" placeholder="Nombres" required><br>
+		<input type="text" name="apellidos" placeholder="Apellidos"><br>
+		<input type="text" name="telefono" placeholder="Teléfono"><br>
+		<input type="email" name="correo" placeholder="Correo"><br>
+		<input type="date" name="fecha_nacimiento"><br>
+		<input type="text" name="cedula" placeholder="Cédula"><br>
+		<select name="tipo" id="">
+			<option value="docente">Docente</option>
+			<option value="estudiante">Estudiante</option>
+			<option value="otro">Otro</option>
+		</select>
+		
+		<br>
+		<label for="">Cursos:</label><br>
+		<input type="radio" name="curso" value="java"> Java<br>
+		<input type="radio" name="curso" value="android"> Android<br>
+		<input type="radio" name="curso" value="react"> React<br>
+		
+		<br><label for="">Talleres:</label><br>
+		<input type="checkbox" name="talleres[]" value="html" />HTML<br>
+		<input type="checkbox" name="talleres[]" value="css" />CSS<br>
+		<input type="checkbox" name="talleres[]" value="visualizacion" />Visualización<br>
+		<input type="checkbox" name="talleres[]" value="cocina" />Cocina<br>
+
+		<button>Registrarse</button>
+		
+	</form>
+</body>
+</html>

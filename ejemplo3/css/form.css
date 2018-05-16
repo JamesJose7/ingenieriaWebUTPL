@@ -1,0 +1,62 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #32393f;
+  min-width: 300px;
+  background: #f7f7f7;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+/* Factura */
+
+table {
+	width: 100%;
+	margin: 30px 0;
+}
+
+th, td {
+	padding: 4px 5px;
+}
+
+tr td:nth-child(2) {
+	text-align: right;
+	width: 15%;
+}
+
+#factura {
+  width: 70%;
+  margin: 30px auto;
+  background: #fff;
+  padding: 2em 3em;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+h1 {
+	text-align: center;
+	border-bottom: 2px dashed black;
+	padding-bottom: 8px;
+	margin: 0 0 5px 0;
+}
+
+p span {
+	font-weight: bold;
+	margin-right: 10px;
+	display: inline-block;
+	float: left;
+	border-bottom: 5px solid #fff;
+}
+
+p {
+	text-align: right;
+	border-bottom: 1px dotted black;
+	padding-bottom: 1px;
+}

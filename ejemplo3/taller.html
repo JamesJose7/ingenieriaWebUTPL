@@ -2,36 +2,55 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>PHP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inscripción | TEC-UTPL 2018-</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<h1>Formularios en PHP</h1>
+	<h1>TEC-UTPL 2018</h1>
 	
-	<form method="post" action="internas/server.php">
-		<!--<label for="nombres">Nombre</label>-->
-		<input id="nombres" type="text" name="nombres" placeholder="Nombres" required><br>
-		<input type="text" name="apellidos" placeholder="Apellidos" required><br>
-		<input type="text" name="telefono" placeholder="Teléfono"><br>
-		<input type="email" name="correo" placeholder="Correo"><br>
-		<input type="date" name="fecha" required><br>
-		<input type="text" name="cedula" placeholder="Cédula" required><br>
-		<select name="tipo" id="">
-			<option value="docente">Docente</option>
-			<option value="estudiante">Estudiante</option>
-			<option value="otro">Otro</option>
-		</select>
+	<form method="post" action="internas/server.php" class="clearfix">
+		<div><h2>Inscripción</h2></div>
+		<fieldset id="left-fieldset">
+			<legend>Información personal</legend>
+
+			<label for="nombres">Nombres</label>
+			<input id="nombres" type="text" name="nombres" required><br>
+			<label for="apellidos">Apellidos</label>
+			<input id ="apellidos" type="text" name="apellidos" required><br>
+			<label for="telefono">Teléfono</label>
+			<input id ="telefono" type="text" name="telefono"><br>
+			<label for="correo">Correo</label>
+			<input id="correo" type="email" name="correo"><br>
+			<label for="fecha">Fecha de nacimiento</label>
+			<input id="fecha" type="date" name="fecha" required><br>
+			<label for="cedula">Cédula</label>
+			<input id="ceula" type="text" name="cedula" required><br>
+			<label>¿Estudiante o Docente?</label>
+			<select name="tipo" id="">
+				<option value="docente">Docente</option>
+				<option value="estudiante">Estudiante</option>
+				<option value="otro">Otro</option>
+			</select>
+		</fieldset>
 		
-		<br>
-		<label for="">Cursos:</label><br>
-		<input type="radio" name="curso" value="java"> Java<br>
-		<input type="radio" name="curso" value="android"> Android<br>
-		<input type="radio" name="curso" value="react"> React<br>
-		
-		<br><label for="">Talleres:</label><br>
-		<input type="checkbox" name="talleres[]" value="html" />HTML<br>
-		<input type="checkbox" name="talleres[]" value="css" />CSS<br>
-		<input type="checkbox" name="talleres[]" value="visualizacion" />Visualización<br>
-		<input type="checkbox" name="talleres[]" value="cocina" />Cocina<br>
+		<fieldset class="right-fieldset">
+			<legend>Ofrecemos</legend>
+
+			<label for="">Cursos</label>
+			<input type="radio" name="curso" value="java" id="java"><label for="java" class="list-item">Java</label><br>
+			<input type="radio" name="curso" value="android" id="android"><label for="android" class="list-item">Android</label><br>
+			<input type="radio" name="curso" value="react" id="react"><label for="react" class="list-item">React</label><br>
+			
+			<br><label for="">Talleres:</label>
+			<input type="checkbox" name="talleres[]" value="html" id="html"><label for="html" class="list-item">HTML</label><br>
+			<input type="checkbox" name="talleres[]" value="css" id="css"><label for="css" class="list-item">CSS</label><br>
+			<input type="checkbox" name="talleres[]" value="visualizacion" id="visualizacion"><label for="visualizacion" class="list-item">HTML</label><br>
+			<input type="checkbox" name="talleres[]" value="cocina" id="cocina"><label for="cocina" class="list-item">Cocina</label><br>
+		</fieldset>
 
 		<button>Registrarse</button>
 		

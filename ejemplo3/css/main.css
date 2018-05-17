@@ -26,6 +26,7 @@ h1 {
   text-align: center;
   display: block; 
   text-shadow: 5px 5px 8px rgba(0,0,0,.1);
+  font-size: 2.5em;
 }
 
 form > div {
@@ -38,6 +39,8 @@ h2 {
   letter-spacing: .3em;
   border-bottom: 1px solid #32393f;
   display: inline-block;
+  font-size: 1.5em;
+  margin-bottom: 35px;
 }
 
 input[type="text"],
@@ -121,6 +124,10 @@ label.list-item {
 }
 
 @media (min-width: 1025px) {
+  h1 {
+    font-size: 3.5em;
+  }
+
   form {
     max-width: 1000px;
   }

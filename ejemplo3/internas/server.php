@@ -20,6 +20,7 @@ $costo_taller =10;
 
 $descuento_docente = 0.1;
 $descuento_estudiante = 0.20;
+$descuento_aplicado = 0;
 
 date_default_timezone_set('America/Los_Angeles');
 $fecha_actual = date('m/d/Y', time());
@@ -49,8 +50,10 @@ if (isset($talleres) && !empty($talleres)) {
 // Descuento
 if ($tipo == "docente") {
 	$costo_total = $costo_total - ($costo_total * $descuento_docente);
+	$descuento_aplicado = 100 * $descuento_docente;
 } else if ($tipo == "estudiante") {
 	$costo_total = $costo_total - ($costo_total * $descuento_estudiante);
+	$descuento_aplicado = 100 * $descuento_estudiante;
 }
 ?>
 
@@ -58,7 +61,7 @@ if ($tipo == "docente") {
 <!--******** Factura ********-->
 <section id="factura">
 <header>
-	<h1>FACTURA</h1>
+	<h1>FACTURA <span class="id_factura">#<?php echo rand(100, 999); ?></span></h1>
 	<p><span>CI: </span><?php echo $cedula ?></p>
 	<p><span>Nombre: </span><?php echo $nombres." ".$apellidos ?></p>
 	<p><span>Fecha: </span><?php echo $fecha_actual ?></p>
@@ -107,6 +110,7 @@ if ($tipo == "docente") {
 </main>
 
 <footer>
+	<p><span>Descuento: </span>%<?php echo $descuento_aplicado ?></p>
 	<p><span>Precio total: </span>$<?php echo $costo_total ?></p>
 </footer>
 </section>

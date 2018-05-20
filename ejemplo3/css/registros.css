@@ -15,11 +15,21 @@ table, th, td {
     border: 1px solid black;
 }
 
-/* Factura */
+h1 {
+	font-size: 2.2em;
+	margin: 30px 0 10px 0;
+}
+
+main {
+	min-width: 400px;
+	overflow: scroll;
+}
+
+/* Table */
 
 table {
 	width: 100%;
-	margin: 30px 0;
+	margin: 5px 5% 30px 5%;
 	border-collapse: collapse;
     border-radius: 15px;
     border-style: hidden; /* hide standard table (collapsed) border */
@@ -30,8 +40,11 @@ th {
 	background: rgba(116,116,116,.1);
 }
 
-table tr:first-child th {
+table tr:first-child th:first-child {
 	border-top-left-radius: 15px;
+}
+
+table tr:first-child th:last-child {
 	border-top-right-radius: 15px;
 }
 
@@ -44,7 +57,27 @@ tr td:nth-child(2) {
 	width: 15%;
 }
 
-main {
-	width: 85%;
-	margin: 0 auto;
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+@media (min-width: 769px) {
+
+
+}
+
+@media (min-width: 1025px) {
+
+	main {
+		width: 90%;
+		max-width: 1000px;
+		margin: 0 auto;
+		overflow: visible;
+	}
+
+	table {
+		margin: 30px 0 10px 0;
+	}
 }

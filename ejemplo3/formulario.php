@@ -10,12 +10,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php $site_name ?></title>
 	
-	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<h1>TEC-UTPL 2018</h1>
+
+	<header class="clearfix">
+		<section>
+			<h1>TEC-UTPL 2018</h1>
+			
+			<nav id="nav-bar">
+				<ul class="clearfix">
+					<li><a href="formulario.php">Registrarse</a></li>
+					<li><a href="internas/list_registros.php">Participantes</a></li>
+					<li><a href="#">Acerca de</a></li>
+				</ul>
+			</nav>
+		</section>
+	</header>
 	
 	<form method="post" action="internas/process_form.php" class="clearfix">
 		<div><h2>Inscripción</h2></div>
@@ -65,15 +77,14 @@
 
 			<?php } ?>
 
-
-			<!-- <input type="checkbox" name="talleres[]" value="html" id="html"><label for="html" class="list-item">HTML</label><br>
-			<input type="checkbox" name="talleres[]" value="css" id="css"><label for="css" class="list-item">CSS</label><br>
-			<input type="checkbox" name="talleres[]" value="visualizacion" id="visualizacion"><label for="visualizacion" class="list-item">HTML</label><br>
-			<input type="checkbox" name="talleres[]" value="cocina" id="cocina"><label for="cocina" class="list-item">Cocina</label><br> -->
 		</fieldset>
 
 		<button>Registrarse</button>
 		
 	</form>
+
+	<footer>
+		<p>@jeeguiguren</p>
+	</footer>
 </body>
 </html>

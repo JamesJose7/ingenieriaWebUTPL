@@ -1,13 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* Base styles */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #384047;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   color: #32393f;
   min-width: 300px;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  margin: 0;
+  position: relative;
 }
 
 form {
@@ -28,6 +47,50 @@ h1 {
   text-shadow: 5px 5px 8px rgba(0,0,0,.1);
   font-size: 2.5em;
 }
+
+/* Nav */
+
+header {
+  background: #1976D2;
+  width: 100%;
+  box-shadow: 0 0 10px 1px rgba(0,0,0,.4);
+}
+
+header h1 {
+  color: #fff;
+  margin: 0;
+  padding: .9em 0 0 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 1.625rem;
+  letter-spacing: .065em;
+  line-height: 1.3; 
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  text-transform: uppercase;
+}
+
+#nav-bar ul {
+  padding: 0;
+  padding-bottom: .8em;
+  list-style: none;
+  text-align: center;
+}
+
+#nav-bar ul li {
+  padding: .5em 0;
+}
+
+#nav-bar a {
+  color: #fff;
+}
+
+#nav-bar a:hover {
+  border-bottom: 1px solid white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.6);
+}
+
+/* Form */
 
 form > div {
   text-align: center;
@@ -107,7 +170,52 @@ label.list-item {
   display: inline;
 }
 
+/* Footer */
+footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #607D8B;
+  color: #212121;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
 @media (min-width: 769px) {
+
+  /* Header */
+  header {
+    padding: 10px 0;
+  }
+  header h1 {   
+    display: inline-block;
+    padding: 10px 15px;
+  }
+
+  #nav-bar {
+    float: right;
+    padding: 0;
+  }
+
+  #nav-bar ul {
+    padding: 0;
+  }
+
+  #nav-bar ul li {
+    float: left;
+    padding: 0;
+    margin: 0 15px;
+  }
+
+  #nav-bar a {
+    padding: 10px 0;
+  }
 
   form {
     max-width: 600px;
@@ -124,6 +232,12 @@ label.list-item {
 }
 
 @media (min-width: 1025px) {
+
+  header section {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
   h1 {
     font-size: 3.5em;
   }

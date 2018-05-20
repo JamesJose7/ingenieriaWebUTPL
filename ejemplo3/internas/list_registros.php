@@ -7,21 +7,36 @@
 	
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/registros.css">
 </head>
 <body>
+
+<header class="clearfix">
+	<section>
+		<h1>TEC-UTPL 2018</h1>
+		
+		<nav id="nav-bar">
+			<ul class="clearfix">
+				<li><a href="../formulario.php">Registrarse</a></li>
+				<li><a href="list_registros.php">Participantes</a></li>
+				<li><a href="#">Acerca de</a></li>
+			</ul>
+		</nav>
+	</section>
+</header>
+
+
+<h1>Lista de registros</h1>
 
 <main>
 
 <?php
 	include("../dll/config.php");
-	include("../dll/mysql.php");?>
-
-	<h1>Lista de registros</h1>
-	<?php 
-		$query = "select * from registros";
-		$registros = mysqli_query($link, $query) or die('error de sql');
-	?>
+	include("../dll/mysql.php");
+	$query = "select * from registros";
+	$registros = mysqli_query($link, $query) or die('error de sql');
+?>
 	
 	<table>
 		<tr>
@@ -32,7 +47,7 @@
 			<th>Cedula</th>
 			<th>Telefono</th>
 			<th>Fecha Nacimiento</th>
-			<th>Talleres</th>
+			<!-- <th>Talleres</th> -->
 			<th>Factura</th>
 		</tr>
 		
@@ -59,7 +74,7 @@
 			<td><?php echo $registro['cedula'] ?></td>
 			<td><?php echo $registro['telefono'] ?></td>
 			<td><?php echo $registro['fecha_nacimiento'] ?></td>
-			<td><?php echo $talleres_string ?></td>
+			<!-- <td><?php echo $talleres_string ?></td> -->
 			<td><a href="factura.php?registro_id=<?php echo $id_actual ?>">Detalle</a></td>
 			
 		</tr>		
@@ -68,6 +83,10 @@
 	</table>
 
 </main>
+
+<footer>
+	<p>@jeeguiguren</p>
+</footer>
 
 </body>
 </html>

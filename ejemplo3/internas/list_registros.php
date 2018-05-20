@@ -33,6 +33,7 @@
 			<th>Telefono</th>
 			<th>Fecha Nacimiento</th>
 			<th>Talleres</th>
+			<th>Factura</th>
 		</tr>
 		
 	<?php	
@@ -59,6 +60,7 @@
 			<td><?php echo $registro['telefono'] ?></td>
 			<td><?php echo $registro['fecha_nacimiento'] ?></td>
 			<td><?php echo $talleres_string ?></td>
+			<td><a href="factura.php?registro_id=<?php echo $id_actual ?>">Detalle</a></td>
 			
 		</tr>		
 

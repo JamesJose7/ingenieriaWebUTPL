@@ -83,11 +83,14 @@ header h1 {
 
 #nav-bar a {
   color: #fff;
+  border-bottom: 1px solid #1976D2;
+  transition: all .3s ease-in-out;
 }
 
 #nav-bar a:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #eaf5fd;
   text-shadow: 2px 2px 4px rgba(0,0,0,.6);
+  color: #eaf5fd;
 }
 
 /* Form */

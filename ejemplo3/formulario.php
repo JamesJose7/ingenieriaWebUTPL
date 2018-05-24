@@ -17,13 +17,13 @@
 
 	<header class="clearfix">
 		<section>
-			<h1>TEC-UTPL 2018</h1>
+			<a href="index.php"><h1>TEC-UTPL 2018</h1></a>
 			
 			<nav id="nav-bar">
 				<ul class="clearfix">
 					<li><a href="formulario.php">Registrarse</a></li>
 					<li><a href="internas/list_registros.php">Participantes</a></li>
-					<li><a href="#">Acerca de</a></li>
+					<li><a href="admin.php">Administrar</a></li>
 				</ul>
 			</nav>
 		</section>
@@ -62,9 +62,19 @@
 			<legend>Ofrecemos</legend>
 
 			<label for="">Cursos</label>
-			<input type="radio" name="curso" value="java" id="java"><label for="java" class="list-item">Java</label><br>
+			<?php 
+				$query = "select * from cursos";
+				$cursos = mysqli_query($link, $query) or die('error de sql');
+			
+				while ($curso = mysqli_fetch_array($cursos,MYSQLI_ASSOC)) { ?>
+	
+				<input type="radio" name="curso" value="<?php echo $curso['id']; ?>" id="<?php echo $curso['nombre']; ?>"><label for="<?php echo $curso['nombre']; ?>" class="list-item"><?php echo $curso['nombre']; ?></label><br>
+				<input type="hidden" name="curso_name" value="<?php echo $curso['nombre']; ?>">
+
+			<?php } ?>
+			<!-- <input type="radio" name="curso" value="java" id="java"><label for="java" class="list-item">Java</label><br>
 			<input type="radio" name="curso" value="android" id="android"><label for="android" class="list-item">Android</label><br>
-			<input type="radio" name="curso" value="react" id="react"><label for="react" class="list-item">React</label><br>
+			<input type="radio" name="curso" value="react" id="react"><label for="react" class="list-item">React</label><br> -->
 			
 			<br><label for="">Talleres:</label>
 			<?php 

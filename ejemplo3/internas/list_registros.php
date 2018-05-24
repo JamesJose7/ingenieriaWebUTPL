@@ -14,13 +14,13 @@
 
 <header class="clearfix">
 	<section>
-		<h1>TEC-UTPL 2018</h1>
+		<a href="../index.php"><h1>TEC-UTPL 2018</h1></a>
 		
 		<nav id="nav-bar">
 			<ul class="clearfix">
 				<li><a href="../formulario.php">Registrarse</a></li>
 				<li><a href="list_registros.php">Participantes</a></li>
-				<li><a href="#">Acerca de</a></li>
+				<li><a href="../admin.php">Administrar</a></li>
 			</ul>
 		</nav>
 	</section>

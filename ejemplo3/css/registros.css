@@ -57,6 +57,18 @@ tr td:nth-child(2) {
 	width: 15%;
 }
 
+table a {
+	border-bottom: 1px solid firebrick;
+	background: #f7f7f7;
+	padding-top: 2px;
+	transition: all .3s ease-in-out;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+table a:hover {
+	background: rgba(116,116,116,.2);
+}
 
 /* ================================= 
   Media Queries

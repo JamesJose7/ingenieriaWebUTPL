@@ -34,6 +34,19 @@ while ($registro = mysqli_fetch_array($registros,MYSQLI_ASSOC)) {
 	$descuento_estudiante = 0.20;
 	$descuento_aplicado = 0;
 
+	//Costos
+	$curso_costos_query = "select * from cursos";
+	$cursos_costos = mysqli_query($link, $curso_costos_query) or die('error de sql');
+	while ($curso = mysqli_fetch_array($cursos_costos,MYSQLI_ASSOC)) {
+		$costo_curso = $curso['costo'];
+	}
+
+	$talleres_costos_query = "select * from talleres";
+	$talleres_costos = mysqli_query($link, $talleres_costos_query) or die('error de sql');
+	while ($taller = mysqli_fetch_array($talleres_costos,MYSQLI_ASSOC)) {
+		$costo_taller = $taller['costo'];
+	}
+
 	//Fecha actual
 	date_default_timezone_set('America/Los_Angeles');
 	$fecha_actual = date('m/d/Y', time());
@@ -112,7 +125,7 @@ while ($registro = mysqli_fetch_array($registros,MYSQLI_ASSOC)) {
 		</tr>
 		<tr>
 			<td><?php echo $curso_nombre ?></td>
-			<td>+$80</td>
+			<td>+$<?php echo $costo_curso ?></td>
 		</tr>
 	</table>
 <?php }?>
@@ -133,7 +146,7 @@ while ($registro = mysqli_fetch_array($registros,MYSQLI_ASSOC)) {
 	for ($i=0; $i < count($talleres_array); $i++) { ?>
 		<tr>
 			<td><?php echo $talleres_array[$i] ?></td>
-			<td>+$10</td>
+			<td>+$<?php echo $costo_taller ?></td>
 		</tr>
 	<?php }?>
 	</table>

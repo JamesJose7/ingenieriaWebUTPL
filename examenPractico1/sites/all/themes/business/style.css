@@ -1169,3 +1169,12 @@ h3.comment-title a{
   text-transform: uppercase;
   font-weight: bold;
 }
+
+.ediardo {
+  width: 300px;
+  height: 200px;
+  background: red;
+  background: url(images/ediardo.png);
+  background-size: cover;
+  margin-left: 5px;
+}

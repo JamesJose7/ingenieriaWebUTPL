@@ -127,7 +127,7 @@
         </div>
       </div><!-- EOF: #banner -->
 	<?php endif; ?>  
-
+  
 
   <?php print $messages; ?>
 

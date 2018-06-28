@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hola</title>
+</head>
+<body>
+	<h1>Este es un archivo php</h1>
+	<?php
+		echo "Tu numero de la suerte: ".rand(100, 1000);
+	?>
+</body>
+</html>

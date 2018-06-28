@@ -1,0 +1,29 @@
+# Cambiar la extension a archivos php
+AddType application/x-httpd-php .EguigurenPalacios
+
+#Cambiar la pagina por defecto
+DirectoryIndex index.EguigurenPalacios
+
+# Denegar acceso a peru
+deny from 200.48.76.74
+
+# Configurar errores http
+ErrorDocument 404 /ingenieria_web/app4/notfound.html
+ErrorDocument 403 /ingenieria_web/app4/denied.html
+ErrorDocument 408 /ingenieria_web/app4/timeout.html
+ErrorDocument 500 /ingenieria_web/app4/unavailable.html
+
+# Directivas de seguridad
+
+# Desabilitar la navegacion por carpetas
+Options -Indexes
+
+# Denegar el acceso a cierta extensiones
+<Files ~ "(.js|.css|.png)">
+Order allow,deny
+Deny from all
+</Files>
+
+# RewriteEngine on
+# RewriteCond %{HTTPS} !=on [NC]
+# RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]

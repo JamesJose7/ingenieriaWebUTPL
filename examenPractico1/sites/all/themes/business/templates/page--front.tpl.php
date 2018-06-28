@@ -80,13 +80,15 @@
         <p><?php if ($site_slogan): ?><?php print $site_slogan; ?><?php endif; ?></p><!--site slogan-->
       </hgroup>
     </div>
+
     <nav id="navigation" class="clearfix" role="navigation">
       <div id="main-menu">
+        <input id="main_search" type="search" placeholder="Buscar...">
         <?php 
           if (module_exists('i18n_menu')) {
             $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
           } else {
-            $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+            $main_menu_tree = menu_tree(variable_get('<<men></men>u_m></menu_m>ain_links_source', 'main-menu'));
           }
           print drupal_render($main_menu_tree);
         ?>
@@ -194,13 +196,13 @@
   
   <?php if (theme_get_setting('footer_copyright') || theme_get_setting('footer_credits')): ?>
   <div class="clear"></div>
-  <div id="copyright">
+  <!-- <div id="copyright">
     <?php if ($footer_copyright): ?>
       <?php print $footer_copyright; ?>
     <?php endif; ?>
     <?php if (theme_get_setting('footer_credits')): ?>
       <span class="credits"><?php print t('Designed by'); ?>  <a href="http://www.devsaran.com">Devsaran</a>.</span>
     <?php endif; ?>
-  </div>
+  </div> -->
   <?php endif; ?>
 </div>

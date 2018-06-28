@@ -82,6 +82,7 @@
     </div>
     <nav id="navigation" class="clearfix" role="navigation">
       <div id="main-menu">
+        <input id="main_search" type="search" placeholder="Buscar...">
         <?php 
           if (module_exists('i18n_menu')) {
             $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));

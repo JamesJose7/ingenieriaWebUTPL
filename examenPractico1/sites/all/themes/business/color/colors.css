@@ -8,11 +8,11 @@ body { background-color:#eeeeee; }
 
 #wrap { border-top: 3px solid #b81007; }
 
-#main-menu .menu a.active, #main-menu .menu ul a.active { background: #b81007; }
+#main-menu .menu a.active, #main-menu .menu ul a.active { background: #FFF; }
 
-#main-menu .menu a.active-trail { background: #b81007; }
+#main-menu .menu a.active-trail { background: #FFF; }
 
-#sitename h1 a:hover, #sitename h2 a:hover { color: #b81007; }
+#sitename h1 a:hover, #sitename h2 a:hover { color: #603814; }
 
 /* Menu Hover */
 

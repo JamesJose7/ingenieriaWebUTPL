@@ -384,7 +384,7 @@ h4 a {
 }
 
 #main-menu .menu a {
-  color: #666;
+  color: #a77d53;
   padding: 1.5em 15px;
   text-decoration: none;
 }
@@ -576,7 +576,8 @@ li.sfHover > a > .sf-sub-indicator {
 .region-footer {
   /* margin-bottom: 20px; */
   padding: 10px 15px;
-  background: rgba(0,0,0,.1);
+  background: #41210a;
+  display: none;
 }
 
 /*-------------------------------------------*
@@ -614,7 +615,7 @@ li.sfHover > a > .sf-sub-indicator {
 .paging {
   padding: 5px 0 15px 0;
   text-align: center;
-  background:url(images/slide-shadow.png) center -7px no-repeat;
+  /* background:url(images/slide-shadow.png) center -7px no-repeat; */
   z-index: 100;
 }
 
@@ -733,7 +734,7 @@ body.sidebar-first #post-content {
   padding-top: 18px;
   margin-top:10px; */
   padding: 10px 15px;
-  background: rgba(0,0,0,.1);
+  background: #41210a;
   font-size: 12px;
 }
 
@@ -1134,4 +1135,37 @@ h3.comment-title a{
 
 #forum .name a{ 
   font-size: 16px;
+}
+
+/* footer */
+#wrap {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#copyright {
+  text-align: center;
+  position: relative;
+  height: 121px;
+}
+
+#text_footer {
+  color: #998675;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#text_footer {
+  display: inline-block; 
+}
+
+#image_footer {
+  position: absolute;
+  right: 0;
+}
+
+
+#main-menu ul li a {
+  text-transform: uppercase;
+  font-weight: bold;
 }

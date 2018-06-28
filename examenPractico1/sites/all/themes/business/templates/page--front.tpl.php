@@ -196,13 +196,18 @@
   
   <?php if (theme_get_setting('footer_copyright') || theme_get_setting('footer_credits')): ?>
   <div class="clear"></div>
-  <!-- <div id="copyright">
-    <?php if ($footer_copyright): ?>
+  <div id="copyright" class="clearfix">
+    <!-- <?php if ($footer_copyright): ?>
       <?php print $footer_copyright; ?>
     <?php endif; ?>
     <?php if (theme_get_setting('footer_credits')): ?>
       <span class="credits"><?php print t('Designed by'); ?>  <a href="http://www.devsaran.com">Devsaran</a>.</span>
-    <?php endif; ?>
-  </div> -->
+    <?php endif; ?> -->
+    <div id="text_footer">
+    <p>Universidad técnica particular de loja</p>
+    <p>Liencia creative commons 2018</p>
+    </div>
+    <img id="image_footer" src="<?php print base_path() . drupal_get_path('theme', 'business') . '/images/bg_footer.png'; ?>" alt="">
+  </div>
   <?php endif; ?>
 </div>
